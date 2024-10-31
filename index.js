@@ -3,9 +3,11 @@ const http = require('http')
 const fs = require('fs')
 const readline = require('readline')
 const hello = require('./modulos')
+const DankiCode = require('./modulos')
 
+new DankiCode()
 
-hello.HelloDanki()
+// hello.HelloDanki()
 
 // const  hostname = '127.0.0.1'
 // const port  = 3000;
