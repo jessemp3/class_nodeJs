@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <div class="container">
+        <form method="POST">
+            <input type="text" name="tarefa" placeholder="Nova tarefa..." required>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <div class="tarefas">
+            <% for (let i = 0; i < tarefasList.length; i++) { %>
+                <p>
+                    <%= tarefasList[i] %>
+                    <a href="/deletar/<%= i %>" title="Deletar tarefa">X</a>
+                </p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
